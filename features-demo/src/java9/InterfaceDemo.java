@@ -2,11 +2,19 @@ package java9;
 
 public interface InterfaceDemo {
 
-    default int getBookNumber() {
-        return getNumber();
+    default int aDefaultMethod() {
+        step1();
+        step2();
+        return step3();
     }
 
-    private int getNumber() {
+    private void step1() {
+    }
+
+    private void step2() {
+    }
+
+    private int step3() {
         return -1;
     }
 }
