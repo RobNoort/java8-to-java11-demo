@@ -1,8 +1,5 @@
 package java9;
 
-import java.io.Closeable;
-import java.io.IOException;
-
 public class TryWithResourcesDemo {
 
     public void java7() {
