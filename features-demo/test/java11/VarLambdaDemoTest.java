@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class VarLambdaDemo {
+public class VarLambdaDemoTest {
 
     public static void main(@Deprecated String... args) {
         var list = List.of("a", "b", "c");

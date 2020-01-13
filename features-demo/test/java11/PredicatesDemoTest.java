@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class PredicatesDemo {
+public class PredicatesDemoTest {
 
     public static void main(String... args) {
         var list = List.of("a", "b");
