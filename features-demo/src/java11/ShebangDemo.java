@@ -1,3 +1,5 @@
+package java11;
+
 //#!/home/rob/.sdkman/candidates/java/11.0.4.hs-adpt/bin/java --source 11
 
 
