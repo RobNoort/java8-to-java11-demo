@@ -1,22 +1,16 @@
 package java9;
 
-import java.util.function.IntPredicate;
-import java.util.stream.IntStream;
+import java9.helpers.ExampleInterface;
 
-public interface PrivateMethodOnInterface
-{
-    default int addEvenNumbers(int... nums) {
-        return add(n -> n % 2 == 0, nums);
-    }
+public class PrivateMethodOnInterface implements ExampleInterface {
 
-    default int addOddNumbers(int... nums) {
-        return add(n -> n % 2 != 0, nums);
-    }
+        public static void main(String[] args) {
+            ExampleInterface demo = new PrivateMethodOnInterface();
 
-    // PRIVATE METHOD JAVA 9
-    private int add(IntPredicate predicate, int... nums) {
-        return IntStream.of(nums)
-                .filter(predicate)
-                .sum();
+            int sumOfEvens = demo.addEvenNumbers(1,2,3,4,5,6,7,8,9);
+            System.out.println(sumOfEvens);
+
+            int sumOfOdds = demo.addOddNumbers(1,2,3,4,5,6,7,8,9);
+            System.out.println(sumOfOdds);
+        }
     }
-}
