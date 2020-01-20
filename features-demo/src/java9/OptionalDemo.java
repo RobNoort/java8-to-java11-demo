@@ -11,17 +11,21 @@ public class OptionalDemo {
     }
 
     private static void optionals() {
+        // immutable
         List<Integer> numbers = List.of(1, 2, 3, 4, 5, 6, 7);
 
         Optional<Integer> first = numbers.stream()
                 .findFirst();
 
-        // ifPresentOrElse
         first.ifPresent(System.out::println); // java 8
 
+        // ifPresentOrElse
+        //  We can pass a Consumer that will be invoked if the Optional is defined,
+        //  and Runnable that will be executed if the Optional is empty
         first.ifPresentOrElse(System.out::println, () -> System.out.println(-1)); // java 9
 
         // or
+        // returns another Optional lazily
         Integer result = first.orElse(-1); // java 8
 
         Optional<Integer> or = first.or(() -> Optional.of(5)); // java 9
@@ -33,5 +37,7 @@ public class OptionalDemo {
                 .orElseGet(Stream::empty); // java 8
 
         values = first.stream(); // java 9
+
+        values.forEach(System.out::println);
     }
 }

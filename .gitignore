@@ -10,3 +10,21 @@ target/
 *.iml
 .idea
 
+/modules-demo/provider/.project
+/modules-demo/fruits-provider/.project
+/modules-demo/application/.project
+/modules-demo/vegetables-provider/.project
+/modules-demo/.project
+/features-demo/out/test/java8-to-java11-demo/META-INF/java8-to-java11-demo.kotlin_module
+/features-demo/out/production/java8-to-java11-demo/META-INF/java8-to-java11-demo.kotlin_module
+/.vscode/launch.json
+/modules-demo/provider/.settings/org.eclipse.core.resources.prefs
+/modules-demo/fruits-provider/.settings/org.eclipse.core.resources.prefs
+/modules-demo/application/.settings/org.eclipse.core.resources.prefs
+/modules-demo/vegetables-provider/.settings/org.eclipse.core.resources.prefs
+/modules-demo/.settings/org.eclipse.core.resources.prefs
+/modules-demo/provider/.settings/org.eclipse.m2e.core.prefs
+/modules-demo/fruits-provider/.settings/org.eclipse.m2e.core.prefs
+/modules-demo/application/.settings/org.eclipse.m2e.core.prefs
+/modules-demo/vegetables-provider/.settings/org.eclipse.m2e.core.prefs
+/modules-demo/.settings/org.eclipse.m2e.core.prefs
