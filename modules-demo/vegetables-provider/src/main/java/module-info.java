@@ -1,11 +1,11 @@
-import com.checho.provider.Provider;
-import com.checho.vegetables.VegetablesProvider;
+import nl.robnoort.provider.Provider;
+import nl.robnoort.vegetables.VegetablesProvider;
 
-module com.checho.vegetables {
+module nl.robnoort.vegetables {
 
-    requires com.checho.provider;
+    requires nl.robnoort.provider;
 
-    exports com.checho.vegetables;
+    exports nl.robnoort.vegetables;
 
     provides Provider
             with VegetablesProvider;

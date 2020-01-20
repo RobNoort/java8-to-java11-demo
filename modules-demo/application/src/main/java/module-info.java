@@ -1,6 +1,6 @@
-module com.checho.application {
+module nl.robnoort.application {
 
-    requires com.checho.provider;
+    requires nl.robnoort.provider;
 
-    uses com.checho.provider.Provider;
+    uses nl.robnoort.provider.Provider;
 }

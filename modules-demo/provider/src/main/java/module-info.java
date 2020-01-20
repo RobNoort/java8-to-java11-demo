@@ -1,5 +1,5 @@
-module com.checho.provider {
+module nl.robnoort.provider {
 
-    exports com.checho.provider;
+    exports nl.robnoort.provider;
 
 }

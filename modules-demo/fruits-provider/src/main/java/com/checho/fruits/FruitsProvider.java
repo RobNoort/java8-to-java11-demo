@@ -1,6 +1,6 @@
-package com.checho.fruits;
+package nl.robnoort.fruits;
 
-import com.checho.provider.Provider;
+import nl.robnoort.provider.Provider;
 
 import java.util.List;
 

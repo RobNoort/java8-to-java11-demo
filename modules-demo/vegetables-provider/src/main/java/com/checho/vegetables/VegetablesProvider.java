@@ -1,6 +1,6 @@
-package com.checho.vegetables;
+package nl.robnoort.vegetables;
 
-import com.checho.provider.Provider;
+import nl.robnoort.provider.Provider;
 
 import java.util.List;
 

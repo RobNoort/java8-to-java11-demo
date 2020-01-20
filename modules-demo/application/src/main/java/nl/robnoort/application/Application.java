@@ -1,6 +1,6 @@
-package com.checho.application;
+package main.java.nl.robnoort.application;
 
-import com.checho.provider.Provider;
+import nl.robnoort.provider.Provider;
 
 import java.util.ArrayList;
 import java.util.List;
