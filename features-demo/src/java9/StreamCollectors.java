@@ -9,23 +9,23 @@ import java.util.stream.Collectors;
 public class StreamCollectors {
     public static void main(String[] args) {
         filteringCollector();
-        flatmappingCollector();
+      //  flatmappingCollector();
     }
 
     private static void filteringCollector() {
 
-        List<Integer> numbers = List.of(1, 2, 3, 5, 5);
+        List<Integer> numbers = List.of(1, 2, 3, 5, 5, 5);
 
-        // Using filter
+        // Filtering before Using group by, creating histograms, niet voldoen -> niet in resultaat
         Map<Integer, Long> result = numbers.stream()
                 .filter(val -> val > 3)
                 .collect(Collectors.groupingBy(i -> i, Collectors.counting()));
         System.out.println(String.format("Result : %s", result));
 
-        // using fitering and group by
+        // using fitering and group by, je krijg nullen terug
         result = numbers.stream()
-                .collect(Collectors.groupingBy(i -> i,
-                        Collectors.filtering(val -> val > 3, Collectors.counting())));
+                .collect(Collectors.groupingBy(i -> i,                                  // lijst waarden
+                        Collectors.filtering(val -> val > 1, Collectors.counting())));  // aantal voldoen aan voorwaarde
         System.out.println(String.format("Result : %s", result));
     }
 
@@ -50,7 +50,8 @@ public class StreamCollectors {
                         Collectors.flatMapping(blog -> blog.getComments().stream(),
                                 Collectors.toList())));
 
-        // The intermediate collection is removed with flatMapping as it gives a direct stream of the comment list to be mapped to the collector's container.
+        // The intermediate collection is removed with flatMapping
+        // as it gives a direct stream of the comment list to be mapped to the collector's container.
         System.out.println("flatmapping");
         System.out.println(String.format("Number of blogs : %s", authorCommentsFlatMapping.size()));
         System.out.println(String.format("Number of comments for author 1: %s", authorCommentsFlatMapping.get("1").size()));
